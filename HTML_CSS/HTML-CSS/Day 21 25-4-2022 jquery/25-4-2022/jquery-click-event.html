@@ -1,0 +1,15 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<button>Enter</button>
+<p>HELLo</p>
+<script>
+    //jquery event handler
+    // console.log($('button'));
+
+    $('button').click(function(){
+        // console.log(Math.random());
+        // console.log($('p'));
+        // $('p').text('<i>NEW DATA</i>')
+        $('p').html(`<i>${Math.random()}</i>`)
+    })
+</script>

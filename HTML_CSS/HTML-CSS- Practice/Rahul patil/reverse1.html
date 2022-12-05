@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <h1>reverse number</h1>
+
+        <p>number: <input type="text" id="t2" placeholder="Enter Number"></p>
+        <p><button onclick="rev()">Enter</button></p>
+       <div></div>
+
+    </body>
+    <script>
+
+        function rev()
+        {
+            var num =document.getElementById('t2').value;
+            var temp=0
+            while(num>0)
+            {
+                var rem=num%10; 
+                num=Math.floor(num/10);   
+                temp= temp * 10 + rem ;
+            }
+            document.querySelector('div').innerHTML = `
+                reverse number = ${temp} 
+               
+            `;
+        }
+
+    </script>
+
+
+</html>

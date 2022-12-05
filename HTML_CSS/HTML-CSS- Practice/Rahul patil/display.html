@@ -1,0 +1,32 @@
+<h2>Product Details</h2>
+
+<p style="display:block">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque ratione impedit possimus, pariatur corporis enim quia inventore? Corrupti quaerat qui impedit! Pariatur cum suscipit, nesciunt inventore officia reprehenderit excepturi magnam!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti porro corporis recusandae alias officiis natus quia tenetur fugit. Totam quas at quia nostrum deserunt quasi laboriosam iste ipsum voluptates maiores.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem veritatis officiis quisquam quam, aperiam recusandae illo, nobis ullam ad error velit harum beatae nulla natus? Ad voluptas reprehenderit quas quidem?
+</p>
+
+
+
+<script>
+    document.querySelector('h2').onclick=function()
+    {
+        var ans=document.querySelector('p').style.display;
+        if(ans=='block')
+        {
+            document.querySelector('p').style.display='none';
+        }
+        else
+        {
+            document.querySelector('p').style.display='block';
+        }
+    }
+    document.querySelector('p').onmouseover=function()
+    {
+        document.querySelector('p').style.background='red';
+    }
+    document.querySelector('p').onmouseout=function()
+    {
+        document.querySelector('p').style.background='white';
+    }
+</script>

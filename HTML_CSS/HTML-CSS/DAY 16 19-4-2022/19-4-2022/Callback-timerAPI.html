@@ -1,0 +1,18 @@
+<!-- TIMER API , DATE CLASS WITH CALLBACK -->
+<p></p>
+<script>
+    // var rec = new Date();
+    // console.log(typeof rec);
+    // console.log(rec);
+    // console.log(rec.getDate());
+    // console.log(rec.getMonth()); // 0-11
+    // console.log(rec.getFullYear()); // 
+    // console.log(rec.toLocaleString()); // 
+    // console.log(rec.toLocaleDateString()); // 
+    // console.log(rec.toLocaleTimeString()); // 
+
+    setInterval(function(){
+        var rec = new Date();
+        document.querySelector('p').innerHTML = rec.toLocaleString();
+    },1000);
+</script>

@@ -1,0 +1,59 @@
+<html>
+ <script>
+    var employees=[];
+    var no=0;
+    function ADDEMP()
+        {
+            var emp={
+            name:'',
+            hours:0,
+            rate:0,
+            date:0
+        }
+          
+        emp.name=document.getElementById('t1').value;
+        emp.hours=document.getElementById('t2').value;
+        emp.rate=document.getElementById('t3').value;
+        emp.date=document.getElementById('t4').value;
+
+        employees[no]=emp;
+        ++no;
+        alert("Employee Added")
+        }
+
+        function SHOWEMP()
+        {
+        
+        document.write(`<table border=1 align='center'> 
+            <tr> 
+            <th> Name </th> 
+            <th> Hours </th>
+            <th> Rate </th>
+            <th> Date</th>
+            </tr>
+            `)   
+            for(var result of employees)
+          {
+            document.write(`
+        
+            <tr>
+            <td>${result.name}</td>
+            <td>${result.hours}</td>
+            <td>${result.rate}</td>
+            <td>${result.date}</td>
+            </tr>
+        
+           `)
+        }
+    }
+</script>
+
+<body>
+    <p>Employee name: <input type="text" id="t1"></p>
+    <p>hours: <input type="text" id="t2"></p>
+    <p>rate: <input type="text" id="t3"></p>
+    <p>date: <input type="text" id="t4"></p>
+    <p><button onclick="ADDEMP()">Add Emp</button></p>
+    <p><button onclick="SHOWEMP()">show Emp</button></p>
+</body>
+</html>

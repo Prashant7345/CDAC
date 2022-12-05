@@ -1,0 +1,34 @@
+
+
+<button>
+    Enter
+</button>
+
+<p>
+    SHOW DATA
+</p>
+
+<script>
+    var xmlhttp = new XMLHttpRequest();
+    console.log(typeof xmlhttp);
+    console.log(xmlhttp);
+
+    console.log(xmlhttp.readyState);
+
+    document.querySelector('button').onclick = function(){
+        xmlhttp.onreadystatechange = function(){
+            console.log(xmlhttp.readyState);
+
+            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                console.log(xmlhttp.responseText);
+                var ans= JSON.parse(xmlhttp.responseText);
+                console.log(ans);
+            }
+        }
+
+        xmlhttp.open('GET','https://jsonplaceholder.typicode.com/users',true);
+        xmlhttp.send();
+    }
+</script>
+
+            

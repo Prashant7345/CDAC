@@ -1,0 +1,44 @@
+<!-- https://reactjs.org/docs/add-react-to-a-website.html -->
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>  
+
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<!-- https://babeljs.io/docs/en/babel-standalone -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<div id="root"></div>
+<script>
+    var h1Tag = `
+            <h1>Hello</h1>
+            <h1>Hello</h1>
+            <h1>Hello</h1>
+            <h1>Hello</h1>
+    `;
+    document.getElementById('root').innerHTML = h1Tag;
+</script>
+
+<div id="root1"></div>
+<script type="text/babel">
+
+    var userName = 'Rohan';
+    var brands = ['puma','adidas'];
+    var userinfo = {age:20,place:'india'};
+
+    function role(){
+        return "Developer";
+    }
+
+    var divTag = (
+        <div>
+            <h1> Hello , {userName} </h1>
+            <h2> World , {brands[0]} </h2>
+            <h3> TEST , {userinfo.age} </h3> 
+            <h1> Role :  , {role()} </h1>
+
+        </div>
+    );
+
+    var targetElement = ReactDOM.createRoot(document.getElementById('root1'));
+
+    targetElement.render(divTag );
+</script>

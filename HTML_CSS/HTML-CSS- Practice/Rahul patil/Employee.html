@@ -1,0 +1,58 @@
+
+<script>
+
+    var employees=[
+        {
+            name:'Amit',
+            hours:50,
+            rate:100,
+            date:prompt("Enter date")
+        },
+        {
+            name:'Rahul',
+            hours:50,
+            rate:125,
+            date:prompt("Enter date")
+        },
+        {
+            name:'Akshay',
+            hours:50,
+            rate:150,
+            date:prompt("Enter date")
+        },
+        {
+            name:'Yogesh',
+            hours:50,
+            rate:200,
+            date:prompt("Enter date")
+        },
+    ]
+
+        document.write(`<div class='container' > `);
+        document.write(`<div class='row' > `);
+        document.write(`<table border=1 align='center'> 
+            <tr> 
+            <th> Name </th> 
+            <th> Hours </th>
+            <th> Rate </th>
+            <th> Date</th>
+            </tr>
+            `)   
+    for(var result of employees)
+    {
+        document.write(`
+        
+            <tr>
+            <td>${result.name}</td>
+            <td>${result.hours}</td>
+            <td>${result.rate}</td>
+            <td>${result.date}</td>
+            </tr>
+        
+        `)
+    }
+        document.write(`</div>`);
+        document.write(`</div>`);
+
+
+</script>

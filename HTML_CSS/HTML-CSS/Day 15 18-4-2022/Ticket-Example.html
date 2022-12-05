@@ -1,0 +1,101 @@
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<style>
+    .ticket{
+        border:solid;
+        border-radius: 10px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-right: 10px;
+    }
+</style>
+
+<div class="container">
+    <h3> Ticket Numbers : <span id="result1">1,2,3</span></h3>
+    <h3> Ticket Amount : <span id="result2">600</span></h3>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-1 text-center ticket" onclick="myfunc(1,100,this)">1<br /> 100</div>
+        <div class="col-xl-1 text-center ticket" onclick="myfunc(2,200,this)">2<br /> 200</div>
+        <div class="col-xl-1 text-center ticket" onclick="myfunc(3,300,this)">3<br /> 300</div>
+        <div class="col-xl-1 text-center ticket" onclick="myfunc(4,400,this)">4<br /> 400</div>
+        <div class="col-xl-1 text-center ticket" onclick="myfunc(5,500,this)">5<br /> 500</div>
+        <div class="col-xl-1 text-center ticket" onclick="myfunc(6,600,this)">6<br /> 600</div>
+        <div class="col-xl-1 text-center ticket" onclick="myfunc(7,700,this)">7<br /> 700</div>
+        <div class="col-xl-1 text-center ticket" onclick="myfunc(8,800,this)">8<br /> 800</div>
+        <div class="col-xl-1 text-center ticket" onclick="myfunc(9,900,this)">9<br /> 900</div>
+    </div>
+</div>
+
+<!-- onclick="myfunc(9,900,this)">
+function myfunc(no,amount,curElement){ -->
+<script>
+    var result = [1,2,3,4,5];
+    console.log(result);
+    // console.log(result.splice(which index no,total vcount));
+    console.log(result.splice(3,1));
+    console.log(result);
+
+    // eval
+    // console.log( eval('200+300-100') )
+
+    /*indexOf()*/
+
+    // var result = [10,20,30,40];
+    // console.log( result.indexOf(30) ); //2
+    // console.log( result.indexOf(40) ); //3
+    // console.log( result.indexOf(410) ); //-1
+
+
+    var arr1 = [];//ticket numbers
+    var arr2 = [];//ticket amount
+    console.log(arr1);
+    console.log(arr2);
+    function myfunc(no,amount,curElement){
+        console.log(no);
+        console.log(amount);
+        console.log(curElement);
+
+        //check value exists or not in arr1 and arr2
+        console.log( arr1.indexOf(no)) 
+        console.log( arr2.indexOf(amount)) 
+
+        //Push() willl add ur record in an array at the end
+        // arr1.push(no);
+        // arr2.push(amount);
+
+        //Push() willl add ur record in an array at start(index 0)
+        // arr1.unshift(no);
+        // arr2.unshift(amount);
+        // console.log(arr1.length);
+        // if(arr1.length<2 && arr1.indexOf(no) == -1){
+        if( arr1.indexOf(no) == -1){
+            arr1.push(no);
+            arr2.push(amount);
+            console.log('TICKET ADDED');
+            curElement.style.background = 'tomato';
+        }
+        else{
+            // console.log('TICKET EXIST');
+            //    alert('TICKET Selected');
+            // arr1.splice('index no','count')
+            var startIndexNo=arr1.indexOf(no);
+            arr1.splice(startIndexNo,1);
+            
+            arr2.splice(startIndexNo,1);
+            curElement.style.background = 'white';
+        }
+        console.log(arr1);
+        console.log(arr2);
+
+        var allTickets = arr1.join(",");
+        console.log(allTickets);
+        document.getElementById('result1').innerHTML = allTickets;
+
+        var finaAmount = arr2.join("+");
+        console.log(finaAmount);
+        document.getElementById('result2').innerHTML = eval(finaAmount);
+    }
+</script>

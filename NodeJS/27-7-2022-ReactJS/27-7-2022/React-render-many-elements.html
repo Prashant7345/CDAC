@@ -1,0 +1,23 @@
+<!-- https://reactjs.org/docs/add-react-to-a-website.html -->
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>  
+
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<div id="root"></div>
+<script>
+    var h1Tag = React.createElement('h1',{class:'text-center'},'h1 data');
+    var h2Tag = React.createElement('h2',{class:'text-center'},'h2 data');
+
+    var divTag = React.createElement('div' , null , h1Tag,h2Tag);
+
+    var targetElement = ReactDOM.createRoot(document.getElementById('root'));
+    targetElement.render(divTag);
+
+</script>
+<!-- 
+<div id="root">
+    <div>
+        <h1></h1>
+        <h2></h2>
+    </div>
+</div> -->

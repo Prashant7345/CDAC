@@ -1,0 +1,65 @@
+<!-- FORM VALIDATION USING REGULAR EXPRESSION -->
+
+<input type="text" class="txt" placeholder=""/>
+<button>Validate</button>
+
+<script>
+    //Event Handler
+    document.querySelector('button').onclick = function(){
+        var result = document.getElementsByClassName('txt')
+        // console.log(result);
+        // console.log(result[0].value);
+
+        // 8pN -- 0-9 a-z A-Z -- exact 3 char
+        /*
+            //  delimiter or boundary
+            <h1></h1>
+            <style></style>
+
+            [] = 1 character
+            [4-9][a-z][A-Z]
+
+            ^[0-9] --- First Character
+            [A-Z]$ --- last character
+        */
+
+        var pattern = /^[a-z][0-9][A-Z]$/;
+
+        var ans = pattern.test(result[0].value);
+        console.log(ans);
+    }
+</script>
+
+<script>
+    // function myfunc(){
+    //     x=10;
+    //     y=20;
+    //     sum=x+y;
+    //     console.log(sum);
+    // }
+    // myfunc();
+
+    function myfunc(){
+        x=10;
+        y=20;
+        sum=x+y;
+        return sum;
+        // console.log('hello');
+    }
+    var ans=myfunc();
+    console.log("RETUEN VALUE",ans);
+    //////////////////////////////////////////////////
+    function myfunc1(){
+        var myvar = function(){
+            x=10;
+            y=20;
+            console.log(x+y);
+        }
+        return myvar;
+    }
+    var ans = myfunc1();
+    console.log(ans);
+    console.log(typeof ans);
+
+    ans();
+</script>

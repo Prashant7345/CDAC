@@ -1,0 +1,49 @@
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<div id="root1"></div>
+
+<!-- REAL DOM RENDERING -->
+<script>
+setInterval(()=>{
+    // console.log(Math.random());
+    var rec = new Date();
+    // console.log(rec.toLocaleString());
+
+    document.getElementById('root1').innerHTML = `
+         <div>
+             <div>
+                 <h1>
+                    <span>TIME : ${rec.toLocaleString()}</span>    
+                </h1>    
+            </div>    
+        </div>
+    `
+
+} , 1000);
+</script>
+
+<div id="root2"></div>
+
+<script type="text/babel">
+
+    setInterval(()=>{
+        var rec = new Date();
+        var record = (
+            <div>
+                <div>
+                    <h1>
+                        <span> TIME : {rec.toLocaleString()} </span>                       
+                    </h1>                    
+                </div>                
+            </div>
+        )
+
+        ReactDOM.render(record , document.getElementById('root2'))
+        
+
+    },1000);
+</script>

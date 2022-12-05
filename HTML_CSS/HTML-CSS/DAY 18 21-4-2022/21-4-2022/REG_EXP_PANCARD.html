@@ -1,0 +1,28 @@
+<input type="text" class="txt" placeholder="" onkeyup="upper(this)"/>
+<button>Validate</button>
+<p></p>
+
+<script>
+    document.querySelector('button').onclick = function(){
+        var result = document.querySelector('.txt').value;
+        console.log(result);
+
+        // 5-alpha 4number 1alpha
+        var pancard_pattern = /^[a-zA-Z]{5}[0-9]{4}[a-zA-Z]$/;
+        var ans = pancard_pattern.test(result);
+        console.log(ans);
+        document.querySelector('.txt').value = result.toUpperCase();
+        document.querySelector('p').innerHTML = (ans)?"Valid":"Invalid";
+    }
+    function upper(curText){
+        console.log(curText);
+        console.log(curText.value);
+        console.log(curText.value.toUpperCase());
+
+        curText.value = curText.value.toUpperCase();
+        var pancard_pattern = /^[a-zA-Z]{5}[0-9]{4}[a-zA-Z]$/;
+
+        var ans = pancard_pattern.test(curText.value);
+        document.querySelector('p').innerHTML = (ans)?"Valid":"Invalid";
+    }
+</script>

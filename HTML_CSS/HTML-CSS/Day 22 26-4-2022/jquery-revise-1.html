@@ -1,0 +1,30 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<button id="btn1">A</button>
+<button id="btn2">B</button>
+<button id="btn3">C</button>
+
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero pariatur dignissimos iste nostrum incidunt quo. Sequi, dolorem molestias! Nisi vitae mollitia voluptas autem natus reprehenderit. Error quia et esse quod.
+</p>
+
+<script>
+    $("p").css('border','solid').width(300);
+
+    $('#btn1').click(function(){
+        $("p").css({
+            'background':'#ccc',
+            'font-size':'30px'
+        });
+    });
+
+    $('#btn2').click(function(){
+        $('p').fadeOut(3000);
+    })
+
+    $('#btn3').click(function(){
+        $('p').animate({
+            'margin-left':'300px'
+        },3000)
+    })
+</script>

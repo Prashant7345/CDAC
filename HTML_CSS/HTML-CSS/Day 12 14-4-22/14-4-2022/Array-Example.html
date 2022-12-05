@@ -1,0 +1,33 @@
+<h1>Array Example</h1>
+
+<script>
+    //list,array or collection
+    var brands = ['nike','puma','killer jeans'];
+    console.log(brands);
+    console.log(typeof brands);
+
+    console.log(brands.length);
+
+    console.log(brands[0]);
+    console.log(brands[1]);
+    console.log(brands[2]);
+    console.log(brands[3]);//undefined
+
+    document.write('<h1> Brands </h1>');
+
+    // interpolation:something (variable ) having diff pattern into something else (in string)
+    document.write(`
+        <ul>
+            <li>${brands[0]}</li>
+            <li>${brands[1]}</li>
+            <li>${brands[2]}</li>
+        </ul>
+    `);
+
+    x=10;
+    y=20;
+    document.write(' SUM = ${x+y} ');
+    document.write(" SUM = ${x+y} ");
+    document.write(` SUM = ${x+y} `);
+</script>
+

@@ -1,0 +1,18 @@
+<button>Enter</button>
+<script>
+    //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+    document.querySelector('button').onclick = function(){
+        var apiPath = 'https://fakestoreapi.com/products';
+        // var ans = fetch(apiPath);
+        // console.log(ans);
+
+        // fetch(apiPath)
+        // .then(res=>{
+        //     console.log( res.json());
+        // })
+
+        fetch(apiPath)
+        .then(res=>res.json())
+        .then(val=>console.log(val));
+    }
+</script>

@@ -1,0 +1,15 @@
+.container{
+    border: solid;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.col{
+    border: solid;
+    width: 25%;
+    padding: 10px;
+}
+.col img{
+    width: 100%;
+}

@@ -1,0 +1,91 @@
+<script>
+    // JSON- javascript json notation ( text format -- string )
+
+    var user = {name:"akshay",age:20}
+    console.log(typeof user);
+    console.log(user);
+
+    var user = '{"name":"akshay","age":20}';
+    console.log(user);
+    console.log(typeof user);
+
+    //transfet object into string
+    var user = {name:"akshay",age:20}
+    var ans = JSON.stringify(user);
+    console.log(ans); 
+    console.log(typeof ans); 
+
+    //transfer your string into an object
+    var user = '{"name":"akshay","age":20}';
+    var ans = JSON.parse(user);
+    console.log(ans);
+    console.log(typeof ans);
+</script>
+
+<script>
+    ///datatype: string,number,object,array,a boolean ,null
+    /// a function , a date , undefined -- must be avoided
+
+    var user = '{"name":"Akshay","age":30}';
+    console.log(user);
+
+    var user1 = '{"userdetails":{"name":"Abhijeet","age":20,"place":"mumbai"}}'
+    console.log(user1);
+    var ans = JSON.parse(user1)
+    console.log(ans);
+
+    var brand = '{"records":["nike","adidas"]}';
+    var ans = JSON.parse(brand)
+    console.log(brand);
+    console.log(ans);
+
+    var user = '{"status":true, "role":null}';
+    var ans = JSON.parse(user)
+    console.log(user);
+    console.log(ans);
+</script>
+
+<script>
+    var user = {
+        name:'ajay',
+        age:20,
+        role:function(){
+            return 'developer'
+        }
+    }
+    console.log(user);
+    console.log(user.name);
+    console.log(user.age);
+    console.log(user.role());
+</script>
+
+<script>
+    var user = '{"name":"ajay","age":20,"role":"function(){ return \'developer\' }"}'
+    
+    var ans= JSON.parse(user)
+    console.log(ans);
+
+    var record = ans.role
+    console.log(record);
+
+    var rec1 = eval("(" + record + ")")
+    console.log(rec1);
+    console.log(rec1());
+
+    // (function(){})
+</script>
+
+<script>
+    var user = {name:'ajay',age:20,role:function(){ return "developer"}}
+    console.log(user);
+
+    // var ans = JSON.stringify(user);
+    // console.log(ans);
+
+    user.role = user.role.toString();
+    console.log(user.role);
+
+     var ans = JSON.stringify(user);
+    console.log(ans);
+
+</script>

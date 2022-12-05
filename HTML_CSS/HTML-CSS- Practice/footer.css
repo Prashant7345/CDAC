@@ -1,0 +1,32 @@
+*{margin:0;}
+.footer{
+    background-color: black;
+    color: rgb(235, 165, 73);
+    height:300px;
+    
+}
+.container{
+    
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.col{
+   
+    width: 25%;
+    padding: 10px;
+}
+.upper{
+     text-transform: uppercase;
+     font-size: 20px;
+     line-height: 2;
+     font-weight: lighter;
+}
+.det{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    list-style: circle;
+
+}

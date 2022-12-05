@@ -1,0 +1,98 @@
+<script>
+    /*
+        // Delimiter
+        /^/ For the 1st char
+        /^$/For the last char ($)
+
+        /^[]$/ -- [] 1 character
+        /^[a-z]$/ -- [a-z] all small alpha
+        /^[a-zA-Z]$/ -- [a-z] all alpha
+        /^[a-zA-Z0-9]$/ -- [a-z] all alphanumeric
+        /^[]{}$/ -- {} range character
+        /^[]{5}$/ -- {5} exact 5 character
+        /^[]{4,10}$/ -- {4,10} min 4 & max 10 character
+        /^[]{4,}$/ -- {4,} atleast 4  characters
+        /^[]{1,}$/ -- {1,} atleast 1  characters
+        /^[]+$/ -- []+ atleast 1  characters
+        /^([a-zA-Z]{2,20})$/ --- () its a group
+
+        /^[a-zA-Z]([a-zA-Z]{2,20})?[0-9]$/ --- ()? its a optional group
+
+        a|b -- (|) OR
+    */
+
+   /*
+        1,2,3,4-12
+        01/02/03/04....09
+   */
+    var reg_exp_month = /^([0]?[1-9]|[1][0-2])$/;
+    var userMonth = 90;
+    var result = reg_exp_month.test(userMonth);
+    console.log(result);
+
+    /*
+        1-9 | 01 02 03....09
+        10-19
+        20-29
+        30-31
+    */
+//    var reg_date = /^([0]?[1-9]|[1][0-9]|[2][0-9]|[3][0-1])$/;
+   var reg_date = /^([0]?[1-9]|[1-2][0-9]|[3][0-1])$/;
+   var userdate = 33;
+   var result =reg_date.test(userdate);
+   console.log(result); 
+
+   /*
+        om@gmail.com
+        om.patil@gmail.com
+        (123_om.patil)@(gmail.com)
+        (username)@(domainname)
+   */
+
+    // username in Email Addr
+    /*
+        om
+        omkar
+        om.patil
+        123_om.patil
+    */
+
+    /*
+        //
+        []
+        {}
+        ^
+        $
+        .
+        -
+        ()
+    */
+
+   var reg_username = /^([a-zA-Z0-9]([a-zA-Z0-9_\.]+)?[a-zA-Z0-9])$/;
+   var username = 'om.patil';
+   var result = reg_username.test(username);
+   console.log("USERNAME",result);
+
+   //DOMAIN NAME
+   /*
+        gmail.com
+        gmail.co.in
+        99acres.com
+        in.com
+        ask-to-resolve.com
+        000webhost.com
+
+        (gmail).(co)(.in)?
+        (gmail).([a-zA-Z]{2,})(.in)?
+        (gmail).([a-zA-Z]{2,})(.[a-zA-Z]{2,})?
+
+        ([a-zA-Z0-9]([a-zA-Z0-9-]+)?[a-zA-Z0-9])
+
+        -  range
+        \-  normal char
+   */
+var reg_domain=/^([a-zA-Z0-9]([a-zA-Z0-9\-]+)?[a-zA-Z0-9])\.([a-zA-Z]{2,})(\.[a-zA-Z]{2,})?$/;
+var domain_value = 'in.com';
+   var result = reg_domain.test(domain_value);
+   console.log("DOMAIN NAME",result);
+</script>

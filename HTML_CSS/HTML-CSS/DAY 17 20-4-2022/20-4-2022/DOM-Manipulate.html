@@ -1,0 +1,27 @@
+<input type="text" id="txt"/>
+
+<button>Add</button>
+
+<ul style="border:solid"></ul>
+
+<script>
+    //Event Handler , DOM Manipulation
+    document.querySelector('button').onclick = function(){
+        // console.log('Event Attached for button');
+        var record = document.querySelector('#txt').value;
+        // console.log(record);
+
+        var liTag = document.createElement('li');
+        console.log(liTag);
+        console.log(typeof liTag);
+
+        liTag.innerHTML = record;
+        console.log(liTag);
+
+        var ulTag=document.querySelector('ul')
+        console.log(ulTag,typeof ulTag);
+
+        //litag(object)===>ultag(object)
+        ulTag.appendChild(liTag);
+    }
+</script>

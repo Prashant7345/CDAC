@@ -1,0 +1,45 @@
+<script>
+    // FOR OF LOOP ( ARRAY )
+    var productSize = ['XL','XXL','L','M','S',10,9,8];
+    console.log(productSize);
+    // document.write(`<li>${productSize[0]}</li>`)
+    // document.write(`<li>${productSize[1]}</li>`)
+    // document.write(`<li>${productSize[2]}</li>`)
+    // document.write(`<li>${productSize[3]}</li>`)
+
+    // for(output-->values  of input---array){
+
+    // }
+    var productSize = ['XL','XXL','L','M','S',10,9,8];
+        
+    for(let result of productSize){
+        
+        document.write(`<li> <input type='checkbox'> ${result}</li>`);
+    }
+
+
+    // FOR IN LOOP ( ARRAY , OBJECT )
+
+    // for(output-->index  in  input---array){
+
+    // }
+    var j=1;
+    for( var i in productSize){
+        // if(i!=0){
+            
+            document.write(`<li>${i} , ${j} , ${productSize[i]}</li>`)
+            j++;
+        // }
+    }
+
+    var users = {
+        name:"Akshay",age:20,place:"Thane",role:"Developer"
+    }
+
+    // for(var result of users){}
+
+    for(var i in users){
+        document.write(`<li> Key :${i} , values: ${users[i]} </li>`);
+    }
+
+</script>

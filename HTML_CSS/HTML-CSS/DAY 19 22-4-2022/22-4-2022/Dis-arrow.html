@@ -1,0 +1,16 @@
+<p  id="p1">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta mollitia doloribus dolore, deleniti quo eaque harum tempora quia animi praesentium quas, asperiores error repellat ullam atque maxime velit ex maiores.
+</p>
+<p id="p2">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta mollitia doloribus dolore, deleniti quo eaque harum tempora quia animi praesentium quas, asperiores error repellat ullam atque maxime velit ex maiores.
+</p>
+<script>
+    document.querySelector('#p1').onmouseout = function(){
+        console.log(this , "MOUSEOUT"); // this stands for current para in anonymous
+        this.style.background = 'lightgray'
+    }
+
+    document.querySelector('#p2').onmouseout = ()=>{
+        console.log(this , "MOUSEOUT"); // this stands for current window in arrow func
+    }
+</script>

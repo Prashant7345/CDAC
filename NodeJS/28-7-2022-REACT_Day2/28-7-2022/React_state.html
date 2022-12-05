@@ -1,0 +1,71 @@
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+<div id="root"></div>
+
+<script type="text/babel">
+    class Userinfo extends React.Component{
+        constructor(){
+            console.log('CONST');
+            super();
+            // state is null , you must have an object in state
+            // this.state = 'hello'
+            // this.state = 100
+            // this.state = []
+            this.state = {
+                uname:'test',
+                uage:20
+            };
+
+            this.x1 = React.createRef();
+            this.x2 = React.createRef();
+        }
+
+        myfunc(){
+            console.log('test');
+            // this.props.name ='New user';
+            // this.props.age =20;
+
+            //get your values form textbox using ref variable
+            // console.log(this.x1);
+            var textbox1 = this.x1.current.value;
+            var textbox2 = this.x2.current.value;
+
+            console.log(textbox1 , textbox2);
+
+            // this.state.uname = textbox1; // it wont re render ur structure
+            // console.log(this);
+
+            // it will re render ur comp
+            this.setState({
+                uname:textbox1,
+                uage:textbox2
+            });
+        }
+        render(){
+            console.log('RENDER');
+            // console.log(this.props);
+            // console.log(this);
+
+            return(
+                <div className='container'>
+                    <input type="text" ref={this.x1} /> <br />
+                    <input type="text" ref={this.x2} /> <br />
+                    <button onClick={ ()=>{this.myfunc() } } >Enter</button>
+                    <p>PROPS VALUE : {this.props.name} , {this.props.age} </p>
+                    <p>STATE VALUE : {this.state.uname} , {this.state.uage} </p>
+                </div>
+            )
+        }
+    }
+
+    var target = ReactDOM.createRoot( document.getElementById('root') );
+    target.render(<Userinfo name="Akshay" age="20" />);
+</script>
+

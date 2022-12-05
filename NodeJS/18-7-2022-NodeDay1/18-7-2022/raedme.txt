@@ -1,0 +1,37 @@
+https://nodejs.org/en/download/
+
+node -v
+
+npm -v
+
+
+loops
+arrays
+objects
+http-ajax-fetch
+promise
+
+DOM
+timer
+......
+
+
+The DOM is not part of the JavaScript language, but is instead a Web API used to build websites. JavaScript can also be used in other contexts. For example, Node.js runs JavaScript programs on a computer, but provides a different set of APIs, and the DOM API is not a core part of the Node.js runtime. 
+
+
+Run your js on server side??
+1.js
+
+
+Types of Modules in Node js??
+1) Built in --- fs,http
+2) Custom - user defined
+3) external Module
+
+https://www.npmjs.com/
+nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application when file changes in the directory are detected.
+
+
+
+npm install -g nodemon??
+C:\Users\user\AppData\Roaming\npm\node_modules

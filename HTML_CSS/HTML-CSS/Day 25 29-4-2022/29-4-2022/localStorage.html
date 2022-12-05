@@ -1,0 +1,36 @@
+<script src="jquery-3.6.0.min.js"></script>
+
+<!-- cookies -->
+<!-- localstorage -->
+
+
+<button id="btn1">ADD</button>
+<button id="btn2">GET</button>
+<button id="btn3">REMOVE</button>
+<p></p>
+<script>
+    // console.log(localStorage);
+    // console.log(typeof localStorage);
+
+    $(document).ready(function(){
+        $('#btn1').click(function(){
+            localStorage.setItem('username','Akshay');
+            localStorage.setItem('userage',20);
+            alert('user added')
+        });
+
+        $('#btn2').click(function(){
+            var ans1=localStorage.getItem('username');
+            console.log(ans1);
+            var ans2=localStorage.getItem('userage');
+            console.log(ans2);
+            $('p').html(` USERNAME : ${ans1} , USERAGE : ${ans2}`)
+        });
+
+        $('#btn3').click(function(){
+            localStorage.removeItem('username')
+            localStorage.removeItem('userage')
+            alert('REMOVED')
+        })
+    })
+</script>

@@ -1,0 +1,36 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<button>Enter</button>
+<script>
+    $(document).ready(function(){
+        var apiPath='https://fakestoreapi.com/products';
+
+        $('button').click(function(){
+            // $.get
+            // $.ajax
+            // $.getJSON
+
+            $.get('dummy.txt',function(res){
+                console.log('This is $.get');
+                console.log(res);
+            })
+
+            $.ajax({
+                type:"GET",
+                url:apiPath,
+                success:function(res){
+                    console.log("$.ajax");
+                    console.log(res);
+                },
+                error:function(err){
+
+                }
+            });
+
+            $.getJSON(apiPath , function(res){
+                console.log("getJSON");
+                console.log(res);
+            });
+        })
+    })
+</script>

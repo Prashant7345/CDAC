@@ -1,0 +1,56 @@
+.container{
+    /* border:solid; */
+    width: 1200px;
+    /* 100% */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    /* will transform child elements from rows to columns with equal width */
+}
+.col{
+    /* border:solid; */
+    width: 25%;
+    /* 25*4=100% */
+    padding: 10px;
+}
+.col img{
+    width: 100%;
+}
+.text-center{
+    text-align: center;
+}
+.col img:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+.xyz{
+    font-size: 30px;
+    background: rgb(100,100,100);
+    transition: background 0.5s , font-size 0.5s;
+}
+.xyz:hover{
+    background: rgb(200,200,200);
+    font-size: 40px;
+}
+
+/* universal selector (*) will select alll html tags */
+*{margin:0;}
+ul{list-style: none;}
+
+.footer{
+    /* border:solid; */
+    background-color: rgb(0,0,0);
+    color: rgb(255,255,255);
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.box{
+    /* border:solid red; */
+    width: 16.6666%;
+    /* 100%/6 */
+}
+.text-uppercase{text-transform: uppercase;}
+
+
+

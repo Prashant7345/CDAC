@@ -1,0 +1,20 @@
+<input type="password" name="" id="txt1">
+<input type="checkbox" name="" id="txt2">
+
+<!-- password Hide And show using Annymous Function -->
+
+<script>
+    document.querySelector('#txt2').onclick=function()
+    {
+        if(txt2.checked)
+        {
+            document.querySelector('#txt1').setAttribute('type','text')
+        }
+        else
+        {
+            document.querySelector('#txt1').setAttribute('type','password')
+        }
+    }
+</script>
+
+

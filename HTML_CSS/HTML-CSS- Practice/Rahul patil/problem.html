@@ -1,0 +1,55 @@
+<ul class="list">
+    <li>
+        <p>Enter Principle</p>
+    </li>
+    <li>
+        <input type="text" name="" id="txt1" placeholder="Enter Principle">
+    </li>
+    <li>
+        <p>Enter rate</p>
+    </li>
+    <li>
+        <input type="text" name="" id="txt2" placeholder="Enter Rate">
+    </li>
+    <li>
+        <p>Enter Period</p>
+    </li>
+    <li>
+        <input type="text" name="" id="txt3" placeholder="Enter period">
+    </li>
+</ul>
+
+<button>Enter</button>
+<div></div>
+<style>
+    .list{
+        list-style: none;
+    }
+</style>
+
+<script>
+    document.querySelector('button').onclick=function()
+    {
+        var Principle=+document.getElementById('txt1').value;
+        var rate=+document.getElementById('txt2').value;
+        var period=+document.querySelector('#txt3').value;
+
+
+
+
+        var result=(Principle*rate*period)/100;
+        console.log(result);
+
+        document.querySelector('div').innerHTML=`
+        
+        Simple interest=${result}
+        
+        `;
+
+
+    }
+</script>
+
+
+
+

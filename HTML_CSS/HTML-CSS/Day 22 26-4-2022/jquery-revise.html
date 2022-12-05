@@ -1,0 +1,26 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<p>HELLO</p>
+<p>HELLO</p>
+
+<h1 class="myclass">TEST</h1>
+<h1 class="myclass">TEST</h1>
+
+<div id="record">this is div</div>
+<div id="record">this is div</div>
+<script>
+    // console.log($);
+    // console.log(jQuery);
+
+    //jquery selector
+    $('p').css('border','solid');
+
+    //jquery chaining
+    $('.myclass').css('background','#ccc').width(200).height(100)
+
+    $("#record").css({
+        'border':'solid',
+        'width':'200px',
+        'background':'gray'
+    });
+</script>

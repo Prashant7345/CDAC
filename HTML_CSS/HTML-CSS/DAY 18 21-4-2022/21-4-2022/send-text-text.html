@@ -1,0 +1,32 @@
+<input type="text" id="txt1"><br>
+<input type="text" id="txt2"><br>
+<button>Enter</button><br>
+<input type="text" id="txt3"><br>
+
+<h1 style="border:solid">
+    HELLO
+</h1>
+
+<script>
+    document.querySelector('button').onclick= function(){
+        document.getElementById('txt3').value = 
+        +document.getElementById('txt1').value + +document.getElementById('txt2').value;
+
+        // document.querySelector('h1').innerHTML = 100;
+        var spanTag = document.createElement('span'); //object
+        console.log(spanTag,typeof spanTag);
+        // document.querySelector('h1').innerHTML = spanTag;
+        document.querySelector('h1').appendChild(spanTag);
+    }
+</script>
+<!-- 
+    Form Elements (value)
+        text
+        pass
+        radio
+        checkbox
+        select
+    Non Form Element:
+        p
+        h1,h2,div,span,..... innerHTML or innerText
+ -->

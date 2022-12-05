@@ -1,0 +1,39 @@
+<button onclick="myfunc()">Enter</button>
+
+<p id="para1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore distinctio dolor reprehenderit atque! Dolore ea aut, sint minima doloremque laudantium nostrum quae optio. Quidem accusantium error repellat praesentium illo ducimus?
+</p>
+<script>
+    function myfunc(){
+        //mouseover event handler
+        document.getElementById('para1').onmouseover = function(){
+            console.log('MOUSE OVER WORKING');
+        }
+        document.getElementById('para1').onmouseout = function(){
+            console.log('MOUSE OUT WORKING');
+        }
+        document.getElementById('para1').onmouseover = function(){
+            console.log('MOUSE OVER WORKING -' , Math.random());
+        }
+    }
+</script>
+
+<hr />
+
+<button onclick="myfunc1()">ENTER</button>
+<p id="para2">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam porro quo aperiam deserunt repudiandae consequatur modi aut inventore ab in! Quisquam, culpa ea. Voluptatibus, quo. Debitis magni suscipit quaerat delectus.
+</p>
+<script>
+    function myfunc1(){
+        document.querySelector('#para2').addEventListener('mouseover',function(){
+            console.log('MOUSE OVER WORKS');
+        });
+        document.querySelector('#para2').addEventListener('mouseout',function(){
+            console.log('MOUSE OUT WORKS');
+        });
+        document.querySelector('#para2').addEventListener('mouseover',function(){
+            console.log('MOUSE OVER WORKS',Math.random());
+        });
+    }
+</script>

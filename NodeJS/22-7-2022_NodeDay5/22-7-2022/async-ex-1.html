@@ -1,0 +1,17 @@
+<script>
+    // var myfunc = async ()=>{
+    //     return 100;
+    // }
+
+    var myfunc = async function(){
+        return 100;
+    }
+
+    var ans = myfunc();
+    console.log(ans);//promise
+
+    ans.then(res=>{
+        console.log('RES FROM ASYNC ANONYMOUS FUNCTION');
+        console.log(res);
+    })
+</script>

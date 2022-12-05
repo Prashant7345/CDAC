@@ -1,0 +1,19 @@
+<h1>test</h1>
+<h1>test1</h1>
+
+<script>
+    console.log( document.querySelectorAll('h1') )
+
+    var arr = [1,2,3,4,5,'a','b','c','d','e','f'];
+    var len = arr.length
+    // console.log(arr,len);
+
+    var fans=``
+    for(var i=1;i<=5;i++){
+        var result = Math.floor( len * Math.random() )
+        // console.log(result,arr[result]);
+        fans=fans+arr[result]
+    }
+
+    console.log(fans);
+</script>

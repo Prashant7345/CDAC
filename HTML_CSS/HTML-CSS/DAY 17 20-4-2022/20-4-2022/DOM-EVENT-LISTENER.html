@@ -1,0 +1,42 @@
+<script>
+    //callback
+    //timer API
+    // Event Handler
+    // Event Listener
+    // form validation -regular expression
+
+    var myvar = function(){
+        console.log('Hello');
+    }
+    console.log(typeof myvar);
+</script>
+
+<button onclick="myvar()">Enter</button>
+
+<script>
+    //callback
+    var arr = [10,20,30,40,50,50];
+    arr.forEach(function(val,i){
+        // console.log(Math.random());
+        console.log(val,i);
+    })
+</script>
+
+<p></p>
+<script>
+    //callback setInterval
+
+    setInterval(function(){
+        var rec = new Date();
+        document.querySelector('p').innerHTML = rec.toLocaleString();
+    },1000)
+</script>
+
+<h1>Hello World</h1>
+
+<script>
+    //Event Handler
+    document.querySelector('h1').onmouseover = function(){
+        this.style.background='gray';
+    } 
+</script>

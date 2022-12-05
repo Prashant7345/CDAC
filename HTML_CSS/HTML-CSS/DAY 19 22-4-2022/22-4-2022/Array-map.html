@@ -1,0 +1,54 @@
+<script>
+    var arr = [1,4,7,9];
+    // [1,16,49,81]
+
+    var arr1=[];
+    for(val of arr){
+        // console.log(val , val**2);
+        arr1.push(val**2);
+    }
+    console.log(arr1);
+
+
+
+    var arr = [12,45,22,10,17,78];
+    // [45,22,78] >=18
+
+    var arr1 = [];
+    for(val of arr){
+        if(val>=18){
+            arr1.push(val);
+        }
+    }
+    console.log(arr1);
+</script>
+
+<script>
+
+    console.log("===================MAP===========================");
+    //map() --- transform array values 
+    var arr = [1,4,7,9];
+    // arr.map((val)=>{
+    //     console.log(val*val);
+    // })
+
+    // arr.map((val)=>{val**2})
+    var ans = arr.map(val=>val**2) ; //HIGHER ORDER FUNCTION
+    console.log(ans);
+
+    console.log("===================MAP===========================");
+    console.log("===================FILTER===========================");
+
+    var arr = [12,45,22,10,17,78];
+    var ans = arr.filter(xyz=>xyz>=18)
+    console.log(ans);
+
+    console.log("===================FILTER===========================");
+
+</script>
+<!-- 
+https://www.flipkart.com/mens-tshirts/pr?sid=clo,ash,ank,edy&fm=neo%2Fmerchandising&iid=M_d0d49e24-bf00-42c2-a06f-e56978562adf_2_372UD5BXDFYS_MC.IF56C41VGEYS&otracker=hp_rich_navigation_2_2.navigationCard.RICH_NAVIGATION_Fashion~Men%2527s%2BTop%2BWear~Men%2527s%2BT-Shirts_IF56C41VGEYS&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L2_view-all&cid=IF56C41VGEYS
+
+https://www.flipkart.com/mens-tshirts/pr?sid=clo%2Cash%2Cank%2Cedy&fm=neo%2Fmerchandising&iid=M_d0d49e24-bf00-42c2-a06f-e56978562adf_2_372UD5BXDFYS_MC.IF56C41VGEYS&otracker=hp_rich_navigation_2_2.navigationCard.RICH_NAVIGATION_Fashion%7EMen%2527s%2BTop%2BWear%7EMen%2527s%2BT-Shirts_IF56C41VGEYS&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L2_view-all&cid=IF56C41VGEYS&p%5B%5D=facets.brand%255B%255D%3DADIDAS
+
+https://www.flipkart.com/mens-tshirts/pr?sid=clo%2Cash%2Cank%2Cedy&fm=neo%2Fmerchandising&iid=M_d0d49e24-bf00-42c2-a06f-e56978562adf_2_372UD5BXDFYS_MC.IF56C41VGEYS&otracker=hp_rich_navigation_2_2.navigationCard.RICH_NAVIGATION_Fashion%7EMen%2527s%2BTop%2BWear%7EMen%2527s%2BT-Shirts_IF56C41VGEYS&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L2_view-all&cid=IF56C41VGEYS&p%5B%5D=facets.brand%255B%255D%3DADIDAS&p%5B%5D=facets.brand%255B%255D%3DBEWAKOOF -->

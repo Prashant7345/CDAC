@@ -1,0 +1,12 @@
+<button onclick="myfunc()">ENTER</button>
+<p id="para">
+    TEST
+</p>
+<input type="text" value="3000" id="txt" />
+<script>
+    function myfunc(){
+        document.getElementById('para').innerHTML = Math.random();
+        document.getElementById('para').style.border = 'solid';
+        document.querySelector('#txt').setAttribute('type','password');
+    }
+</script>

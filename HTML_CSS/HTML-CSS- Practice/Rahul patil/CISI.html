@@ -1,0 +1,48 @@
+<html >
+<head>
+    
+</head>
+<body>
+    <div class="container">
+        <h1> SIMPLE INTEREST & COMPOUND INTEREST </h1>
+       <div>principle: </div> <input type="text" id="txt1"  class="form-control"  /> <br>
+       <div>rate: </div>  <input type="text" id="txt2" class="form-control"  /> <br>
+       <div>duration: </div> <input type="text" class="txt3" class="form-control" /> <br>
+        <!-- <button onclick="si()">si</button> -->
+        
+        <div><input type="checkbox" onclick="si()" />si</div>
+        <div><input type="checkbox" onclick="ci()" />ci</div>
+        <p></p>
+        
+    </div>
+    <script>
+        function si(){
+            
+            var amount = +document.querySelector('#txt1').value;
+            var rate = +document.querySelector('#txt2').value;
+            var duration = +document.querySelector('.txt3').value;
+
+
+            var result= Math.round(amount*rate*duration/100);
+           
+            document.querySelector('p').innerHTML = `
+                Simple Interest = ${result} <br />
+                Final Amount = ${result + amount}
+            `;
+        }
+        function ci(){
+            
+            var amount = +document.querySelector('#txt1').value;
+            var rate = +document.querySelector('#txt2').value;
+            var duration = +document.querySelector('.txt3').value;
+
+            var n = 12;
+            var result = amount * Math.pow((1 + rate / 100),duration)-amount;
+            // var result = result1 - amount;
+            document.querySelector('p').innerHTML = `
+                Compound Interest = ${result.toFixed(2)} <br />
+            `;
+        }
+    </script>
+</body>
+</html>

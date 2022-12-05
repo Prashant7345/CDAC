@@ -1,0 +1,21 @@
+<textarea cols="50" rows="5" maxlength="20" onkeyup="myfunc(this)"></textarea>
+<span>20</span>
+
+<script>
+    function myfunc(curTextArea){
+        // console.log(curTextArea);
+        // console.log(curTextArea.value);
+        // console.log(curTextArea.value.length);
+        var ans = 20-curTextArea.value.length;
+        // console.log(ans);
+        curTextArea.nextElementSibling.innerHTML = ans;
+        if(ans<5){
+            curTextArea.nextElementSibling.style.color = 'red';
+        }
+        else{
+            curTextArea.nextElementSibling.style.color = 'black';
+        }
+    }
+</script>
+
+UNICODE TEXT FORMAT UTF-8

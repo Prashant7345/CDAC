@@ -1,0 +1,23 @@
+<script src="jquery-3.6.0.min.js"></script>
+
+<button>Enter</button>
+<input type="text" id="txt">
+
+<script>
+    $(document).ready(function(){
+        var arr=[];
+        $('button').click(function(){
+            var rec = $('#txt').val();
+            console.log(rec);
+
+            arr.push(rec);
+            console.log(arr);
+
+            var fans = JSON.stringify(arr);
+            console.log(fans);
+            localStorage.setItem('brandName',fans);
+        })
+    })
+</script>
+
+<a href="localstorage2.html">SHOW DATA</a>

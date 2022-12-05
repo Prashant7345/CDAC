@@ -1,0 +1,19 @@
+<input type="text" id="txt1">
+<button>Validation</button>
+<p></p>
+
+
+<script>
+    document.querySelector('button').onclick=function()
+    {
+        var mobile=document.querySelector('#txt1').value;
+
+        var reg_mob=/^[6-9][0-9]{9}$/
+
+
+        var ans=reg_mob.test(mobile);
+        console.log(ans);
+
+        document.querySelector('p').innerHTML=(ans) ? 'Valid' : "Invalid"
+    }
+</script>

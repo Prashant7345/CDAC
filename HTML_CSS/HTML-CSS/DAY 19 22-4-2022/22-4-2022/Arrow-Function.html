@@ -1,0 +1,22 @@
+<script>
+    
+    function myfunc(){
+        console.log('NAMED',1000);
+    }
+
+    //=> FAT Arrow Function
+    var myfunc = ()=>{
+        console.log('ARROW' , 3000);
+    }
+
+    var myfunc = function(){
+        console.log('ANONYMOUS',2000);
+    }
+
+
+    myfunc();
+    /*
+        Priority - Named Function (lowest)
+        arrow- anonymous ( position)
+    */
+</script>

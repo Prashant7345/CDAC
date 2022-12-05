@@ -1,0 +1,16 @@
+<script>
+    var user = {
+        name:"Akshay",
+        age:20,
+        place:"Nashik"
+    }
+
+    console.log(user.name);
+    console.log(user['name']);
+
+    // for(let key of user){}
+
+    for(let key in user){
+        console.log(key , user[key]);
+    }
+</script>

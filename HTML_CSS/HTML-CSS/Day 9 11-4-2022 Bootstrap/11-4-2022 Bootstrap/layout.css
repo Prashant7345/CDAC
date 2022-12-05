@@ -1,0 +1,84 @@
+body{   font-family: 'Roboto Condensed', sans-serif;}
+.header{/*border:solid;*/padding-top: 15px;padding-bottom: 15px;}
+.header a{color: #666;font-weight: bold;}
+.header a:hover{color: #000;}
+.top-menu-background{background-color: #fff !important;;
+    border-bottom:1px solid #999;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.slider_content{
+    /* border:30px solid; */
+    padding-left: 60px;
+    padding-top: 80px;
+}
+.content{
+    /* border:solid;  */
+    padding-top: 20px;padding-bottom: 20px;
+}
+.categories a,.brand a{color: #666 !important;}
+.categories a:hover,.brand a:hover{color: #000 !important;}
+.categories button{color: #000 !important;background-color: #fff !important;}
+.brand{
+margin: 20px 0;
+}
+.brand ul{border:1px solid #ccc}
+.left_banner{margin-bottom: 20px;}
+.search_box{
+    border:none !important;
+    border-bottom:1px solid #000 !important;
+}
+.footer{background-color: rgb(28, 26, 26);padding-top: 20px;padding-bottom: 20px;}
+.footer-service h3{font-size: 22px; font-weight: bold;color: #999;}
+.footer-service a{padding-left: 0;color: #999;}
+.footer-service a:hover{padding-left: 0;color: #ccc;}
+
+.copyright{color: #999;border-top:1px solid white;margin-top: 20px;}
+.copyright a{color: #aaa;}
+.register-form{list-style: none;}
+.register-form li {padding-top: 5px;padding-bottom: 5px;}
+
+/* responsive for mobiles (portrait) */
+@media only screen and (max-width:575px){
+    /* body{
+        border:solid red
+    } */
+    .logo{
+        /* border: solid; */
+        text-align: center;
+        padding: 15px 0;
+    }
+    .top-menu{
+        justify-content: center !important;
+    }
+    .slider_content{
+        display: none;
+    }
+    .footer-service{
+        /* border:solid; */
+        padding-left: 30px;
+        padding-bottom: 20px;
+    }
+    .copyright,.author{
+        padding: 10px 0;
+        text-align: center !important;
+    }
+}
+
+.col-xl-3{
+color: rgb(221, 209, 186);}
+
+.abt{
+    color: rgb(226, 211, 50);
+    font-size: x-large;}
+
+
+.col-xl-4{
+    color: rgb(213, 162, 67);}
+
+.col-xl-2 {
+    color: rgb(131, 211, 100);}
+
+p{
+    color: azure;
+}

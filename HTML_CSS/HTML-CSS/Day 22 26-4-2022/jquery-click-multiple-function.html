@@ -1,0 +1,24 @@
+<button onclick="myfunc()">Enter</button>
+
+<script>
+    function m1(){
+        console.log(100);
+    }
+    function m2(){
+        console.log(200);
+    }
+    function myfunc(){
+        m1();
+        m2();
+    }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<button id="btn">Enter</button>
+<script>
+    $('#btn').click(function(){
+        m1();
+        m2();
+    })
+</script>

@@ -1,0 +1,69 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- traverse or navigation Function , Event , this , jquery effects -->
+
+<div class="container accordion">
+    <h1>
+        heading 1
+    </h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sint sed accusantium odio animi ipsam maxime
+        nostrum, quisquam vel laudantium voluptatum exercitationem enim consequatur voluptatem eos neque illo numquam
+        quasi?
+    </p>
+
+    <h1>
+        heading 2
+    </h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sint sed accusantium odio animi ipsam maxime
+        nostrum, quisquam vel laudantium voluptatum exercitationem enim consequatur voluptatem eos neque illo numquam
+        quasi?
+    </p>
+
+    <h1>
+        heading 3
+    </h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sint sed accusantium odio animi ipsam maxime
+        nostrum, quisquam vel laudantium voluptatum exercitationem enim consequatur voluptatem eos neque illo numquam
+        quasi?
+    </p>
+</div>
+
+<style>
+    .accordion {
+        width: 500px !important;
+    }
+
+    .accordion h1,
+    .accordion p {
+        margin: 0;
+        padding: 15px;
+        border: 1px solid #aaa
+    }
+</style>
+
+<script>
+    $(".accordion p").hide();
+    $(".accordion p:eq(0)").show();
+
+    $('.accordion h1').click(function () {
+        // console.log('TEST');
+        // console.log($(this));
+        // console.log($(this).next());
+
+        // console.log($(this).next().is(':visible')); //false
+
+        // (!false ---> true)
+
+        if (!$(this).next().is(':visible') ) {
+            //console.log('perform accordion');
+            $('.accordion p').slideUp();
+            $(this).next().slideDown();
+        }
+    });
+</script>

@@ -1,0 +1,21 @@
+<script>
+    var arr = [10,20,30,40,10,20];
+    console.log(arr);
+
+    var arr1=[];
+    arr.forEach(val=>{
+        // console.log(val);
+        var ans = arr1.indexOf(val)
+        // console.log(ans);
+        if(ans==-1){
+            arr1.push(val)
+        }
+    });
+    console.log(arr1);
+
+    var arr = [10,20,30,40,10,20];
+    console.log(arr);
+
+    var arr1 = new Set(arr);
+    console.log(arr1);
+</script>

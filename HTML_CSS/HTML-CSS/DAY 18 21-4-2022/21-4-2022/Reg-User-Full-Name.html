@@ -1,0 +1,45 @@
+<input type="text" class="txt" placeholder=""/>
+<button>Validate</button>
+
+<script>
+    document.querySelector('button').onclick = function(){
+        var result = document.querySelector('.txt').value;
+        console.log(result);
+        /*
+            MIN 2 : OM
+            MAX :Nt Countable
+            [a-zA-Z]
+            OM Patil
+            Omkar Patil
+            Omkar Ram Patil
+
+            ()--- group
+            ()?--- Optional group 
+            []+ ----  min or atleast 1 char
+            []{1,} ----  min or atleast 1 char
+        */ 
+
+        var reg_username = /^[a-zA-Z]([a-zA-Z ]+)?[a-zA-Z]$/
+        var ans = reg_username.test(result);
+        console.log(ans);
+
+        document.querySelector('.txt').style.textTransform = 'capitalize';
+
+
+        if(result.length <=280 ){
+            console.log('valid');
+        }
+        else{
+            console.log('Invalid');
+        }
+
+        // if(ans){
+        //     // var record  = result.split(" ");
+        //     // console.log(record);
+        //     // console.log(record[0]);
+        //     // console.log(record[0][0].toUpperCase());
+        //     // var ans1=record[0].replace(record[0][0],record[0][0].toUpperCase());
+        //     // console.log(ans1);
+        // }
+    }
+</script>

@@ -1,0 +1,14 @@
+<p>HELLO</p>
+<button>ENTER</button>
+
+<button onclick="myfunc1(100,200)">CLICK</button>
+
+<script>
+    document.querySelector('button').onclick = ()=>{
+        document.querySelector('p').innerHTML = Math.random();
+    }
+
+    var myfunc1 = (a,b)=>{
+        console.log(a+b);
+    }
+</script>

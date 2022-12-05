@@ -1,0 +1,43 @@
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction -->
+<!-- document - DOCUMENT OBJECT MODEL (DOM) -->
+<!-- this keyword in js -->
+<html>
+    <head>
+        <style>
+            #para{
+                border:solid;
+            }
+            #heading{
+                background-color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="para">test</p>
+        <h1 id="heading">hello</h1>
+
+        <button onclick="myfunc()">Enter</button>
+
+        <script>
+            function myfunc(){
+                // console.log('TEST');
+                console.log(typeof document);
+                console.log(document);
+
+                // properties & methods
+                //select element by id from current web page or document
+                var pTag=document.getElementById('para');
+                console.log(pTag , typeof pTag);
+
+                pTag.style.border = "solid green";
+                pTag.style.fontSize = '40px';
+                pTag.style.textAlign = 'center';
+                pTag.style.textTransform = 'uppercase';
+
+                //innerHTML,innerText
+                // pTag.innerText = `Hello , <i>TEST</i>`;
+                pTag.innerHTML = `Hello , <i>TEST</i>`;
+            }
+        </script>
+    </body>
+</html>

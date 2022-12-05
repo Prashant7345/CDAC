@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <h1 id="heading">hello</h1>
+    <h1 id="heading">hello</h1>
+
+    <button onclick="myfunc()">Enter</button>
+    <style>
+        .p1{background-color: gray;}
+        .p2{text-transform: uppercase;}
+    </style>
+    <script>
+        function myfunc(){
+            // console.log('TEST');
+            // console.log(document);
+            // console.log(document.getElementById('heading'));
+            var tag = document.getElementById('heading')
+            console.log(tag);
+            tag.style.border = 'solid';
+
+            // tag.innerText = ' Hello <u> World </u> ';
+            tag.innerHTML = ' Hello <u> World </u> ';
+
+            tag.className = 'p1 p2';
+        }
+    </script>
+</body>
+</html>

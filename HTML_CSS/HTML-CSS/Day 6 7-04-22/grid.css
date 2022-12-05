@@ -1,0 +1,28 @@
+body{
+    /* background-color: #rrggbb */
+    /* background-color: #rgb */
+    /* 0 to 9 , a to f */
+    /* background-color: #000000;
+    background-color: #ffffff;
+    background-color: #ff0000;
+    background-color: #cccccc; */
+    background-image: url(images/product1.jpg) , url(images/gallery1.jpg);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, no-repeat;
+    /* background-repeat: repeat-x; */
+    /* background-repeat: repeat-y; */
+    /* background-repeat: repeat; */
+    background-attachment: fixed;
+    /* background-image: url(images/girl1.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-position: center center; */
+    /* background-size: cover; */
+}
+.container{
+    width: 1200px;
+    margin: auto;
+    font-size: 40px;
+    line-height: 2;
+    padding: 30px 0;
+    /* top-bottom  right-left */
+}

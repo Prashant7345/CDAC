@@ -1,0 +1,45 @@
+<button>Enter</button>
+
+<ul style="border:solid"></ul>
+
+<script>
+    document.querySelector('button').onclick = function(){
+        var liTag = document.createElement('li');
+        console.log(liTag , typeof liTag);
+
+        var ulTag = document.querySelector('ul');
+        console.log(ulTag , typeof ulTag);
+
+        liTag.innerHTML = Math.random();
+
+        // ulTag.innerHTML = liTag;
+        ulTag.appendChild(liTag)
+    }
+</script>
+<!-- 
+    DOM SELECTORS METHODS
+    -----------------------
+    getElementById()
+    getElementsByClassName()
+    getElementsByName()
+    querySelector()
+    querySelectorAll()
+
+    DOM PROPERTIES
+    -----------------------
+    innerHTML
+    innerText
+    style
+    className
+    id
+
+    DOM  METHODS
+    -----------------------
+    setAttribute()
+    getAttribute()
+
+    DOM Event Handler
+    DOM Event LISTENER
+    DOM MANIPULATION 
+        appendChild()
+ -->

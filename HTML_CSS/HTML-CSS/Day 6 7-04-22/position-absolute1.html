@@ -1,0 +1,58 @@
+<!-- absolute , text on image -->
+
+<style>
+    *{margin:0;padding: 0;}
+    .banner{
+        /* border: solid;; */
+        position: relative;
+    }
+    .banner img{width: 100%;}
+    .banner_text{
+        /* border:solid; */
+        width: 600px;
+        position: absolute;
+        bottom: 30%;
+        left: 50%;
+        margin-left: -300px;
+    }
+    body{
+        height: 1000px;
+    }
+    #heading{
+        text-align: center;
+        color: gray;
+        padding: 20px 0;
+    }
+    .banner_text{
+        background-color: black;
+        /* absolute & fixed elements can have z-index */
+        /* z-index:0  -9999 to 9999 */
+        z-index: 10;
+    }
+    .banner_text1{
+        background-color: red;
+        width: 600px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        margin-left: -400px;
+        z-index: 15;
+    }
+</style>
+
+<div class="banner">
+    <img src="https://sslimages.shoppersstop.com/sys-master/root/h7e/h4b/27228636282910/web_bar_women-indianwear_main-carousel-20220310.jpg" alt="">
+
+    <div class="banner_text">
+        <h1 id="heading">Fashion World</h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem voluptatem molestias nesciunt, enim accusamus asperiores cumque delectus ipsum nemo saepe molestiae sapiente aliquam quibusdam vero quas, modi beatae facere quaerat!
+        </p>
+    </div>
+    <div class="banner_text1">
+        <h1 id="heading">Fashion World</h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem voluptatem molestias nesciunt, enim accusamus asperiores cumque delectus ipsum nemo saepe molestiae sapiente aliquam quibusdam vero quas, modi beatae facere quaerat!
+        </p>
+    </div>
+</div>

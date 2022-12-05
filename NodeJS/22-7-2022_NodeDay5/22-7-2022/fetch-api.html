@@ -1,0 +1,42 @@
+<!--
+    CORE AJAX--- JAVASCRIPT
+
+Jquery AJAX == $.get(),$.post(),$.ajax()
+
+axios === promise object ()
+
+    fetch() --- ASYNC HTTP -- PAGE RELOAD
+
+ -->
+
+<button onclick="myfunc()">Fetch</button>
+<script>
+    //Promise based HTTP client for the browser
+
+    function myfunc(){
+        var ans= fetch('https://fakestoreapi.com/products');
+        // console.log(ans); // promise
+        ans.then(res=>{
+            // console.log(res.json()); //promise
+            res.json().then(result=>{
+                console.log(result);
+            })
+        });
+    }
+
+    function myfunc(){
+        fetch('https://fakestoreapi.com/products')
+        .then(res=>res.json())
+        .then(val=>{
+            console.log(val);
+        });
+    }
+</script>
+
+<!-- 
+    fetch---
+    AJAX (Javascript)
+    jquery Ajax
+    promises
+    Axios
+ -->

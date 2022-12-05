@@ -1,0 +1,5 @@
+text on images
+
+setinterval-js-multiple-images[src:flipkart]
+grid vs flex
+background-image

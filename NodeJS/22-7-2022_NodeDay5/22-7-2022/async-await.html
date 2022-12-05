@@ -1,0 +1,15 @@
+<script>
+    async function api(apiPath){
+        var ans = await fetch(apiPath); //1ms
+        // console.log(ans);
+        var rec = await ans.json();
+        // console.log(rec);
+        return rec;
+    }
+
+    var ans = api('https://fakestoreapi.com/products/1');
+    ans.then(res=>{
+        console.log("ASYNC AWAIT");
+        console.log(res);
+    });
+</script>

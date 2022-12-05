@@ -1,0 +1,26 @@
+<input type="text" class="txt" placeholder=""/>
+<button>Validate</button>
+
+<script>
+    document.querySelector('button').onclick = function(){
+        var result = document.querySelector('.txt').value;
+        console.log(result);
+        
+        // 10 digits --- 1st non zero
+        // var pattern_mobile = /^[1-9][0-9]{9}$/;
+        // var pattern_mobile = /^([1-9][0-9]{3}) ([0-9]{3}) ([0-9]{3})$/;
+        var ans = pattern_mobile.test(result);
+        console.log(ans);
+    }
+</script>
+
+<input type="text" class="txt1" placeholder="" onkeyup="myfunc(this)"/>
+<script>
+    function myfunc(curtext){
+        console.log(curtext.value);
+        if(curtext.value.length == 4 || curtext.value.length == 8){
+            curtext.value = curtext.value+" ";
+        }
+        
+    }
+</script>

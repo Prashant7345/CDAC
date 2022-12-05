@@ -1,0 +1,23 @@
+<script>
+    console.log(90!=='90'); //true (!== value & data type both)(!= value)
+    
+    x=10;
+    var y=20;
+    let z=30;
+
+    if(90!=='90')
+    {
+        // console.log('YES');
+        console.log("Within If Area --- block scope");
+        console.log(x,y,z);
+        
+        a=100;
+        var b=200;
+        let c=300; // its restricted within block scope
+    }
+
+    console.log('Outside if --block scope');
+    console.log(a);
+    console.log(b);
+    console.log(c);
+</script>

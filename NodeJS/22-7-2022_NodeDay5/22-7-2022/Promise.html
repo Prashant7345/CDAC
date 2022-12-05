@@ -1,0 +1,35 @@
+<!-- 
+    object in js to perform asyc operation
+    send from browser=>server
+    get server=>browser
+    HTTP:
+
+    Without Page refresh
+    AJAX
+    
+    promises ===> Pending state , Resolved(fullfiled) , Rejected(error)
+
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+ -->
+<script>
+    let rec = new Promise((res,rej)=>{
+        // console.log(typeof res);
+        // console.log(typeof rej);
+
+        setTimeout(()=>{
+            res('API DATA CALLED');
+            rej('API FAIL');
+        } , 3000);
+    });
+    console.log(rec);
+    rec
+    .then((response)=>{
+        console.log("==>",response);
+    })
+    .catch((err)=>{
+        console.log("err=>",err);
+    })
+    .finally(()=>{
+        console.log('Another Task');
+    });
+</script>

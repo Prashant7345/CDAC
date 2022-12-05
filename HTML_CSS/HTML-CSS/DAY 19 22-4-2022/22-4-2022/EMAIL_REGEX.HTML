@@ -1,0 +1,24 @@
+<input type="text" id="txt">
+<button>Enter</button>
+<script>
+    //(username)@(domainname)
+    /*
+        /^([a-zA-Z0-9]([a-zA-Z0-9_\.]+)?[a-zA-Z0-9])$/
+
+        /^([a-zA-Z0-9]([a-zA-Z0-9\-]+)?[a-zA-Z0-9])\.([a-zA-Z]{2,})(\.[a-zA-Z]{2,})?$/
+
+        [0-9] [\d]
+        [a-z] [\w]
+        [all spec] [\s]
+    */
+
+   var reg_email = /^([a-zA-Z0-9]([a-zA-Z0-9_\.]+)?[a-zA-Z0-9])@([a-zA-Z0-9]([a-zA-Z0-9\-]+)?[a-zA-Z0-9])\.([a-zA-Z]{2,})(\.[a-zA-Z]{2,})?$/;
+
+document.querySelector('button').onclick = function(){
+    var textboxValue = document.getElementById('txt').value;
+    var ans = reg_email.test(textboxValue);
+    console.log(ans);
+}
+
+</script>
+

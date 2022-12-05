@@ -1,0 +1,27 @@
+<!-- https://cdnjs.com/libraries/axios -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<button onclick="myfunc()">Fetch</button>
+<script>
+    //Promise based HTTP client for the browser and node.js
+    // console.log(axios);
+
+    function myfunc(){
+        // console.log(axios);
+        var ans_axios = axios.get('https://fakestoreapi.com/products')
+        console.log(typeof ans_axios);
+        console.log(ans_axios);
+
+        ans_axios
+        .then((res)=>{
+            console.log("res from api");
+            console.log(res);
+            console.log(res.status);
+            console.log(res.data);
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+        .finally();
+    }
+</script>

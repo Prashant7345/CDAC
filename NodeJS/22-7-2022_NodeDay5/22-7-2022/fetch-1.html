@@ -1,0 +1,32 @@
+<button>Enter</button>
+<script>
+    // console.log(typeof XMLHttpRequest);
+    // console.log(XMLHttpRequest);
+
+
+    var xmlhttp = new XMLHttpRequest();
+    // console.log(xmlhttp);
+
+    document.querySelector('button').onclick = function(){
+        var apiPath = 'https://fakestoreapi.com/products';
+
+        console.log(xmlhttp.readyState); //0 --> no request initialized
+
+        xmlhttp.onreadystatechange = function(){
+            console.log(xmlhttp.readyState , xmlhttp.status ); 
+            if(xmlhttp.readyState==4 && xmlhttp.status ==200){
+                console.log(xmlhttp.responseText);
+                // responseText -- get ur values from api
+                var record = JSON.parse(xmlhttp.responseText);
+                console.log(record);
+            }
+        }
+
+        xmlhttp.open('GET' ,apiPath,true); // connect to ur api using get method ==> readyState=1
+
+        xmlhttp.send(); //send your request to fetch data from api path(which is connected at line: 20) , readystate=2,staus=200,404,501
+
+        // readyState=3 -- there is process on server side
+        // readyState=4 -- initializes request is completed
+    }
+</script>

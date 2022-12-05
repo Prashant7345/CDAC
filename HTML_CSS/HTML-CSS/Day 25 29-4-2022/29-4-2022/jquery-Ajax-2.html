@@ -1,0 +1,32 @@
+<script src="jquery-3.6.0.min.js"></script>
+
+<button>Enter</button>
+
+<ul>
+
+</ul>
+
+<script>
+    // console.log($);
+    $(document).ready(function(){
+        $('button').click(function(){
+            // console.log('WORKING');
+            //ajax operation
+            $.get('https://jsonplaceholder.typicode.com/users',function(res){
+                console.log(res); //Array
+
+                var ans=``;
+                $.each(res , function(i , val){
+                    // console.log(i);
+                    // console.log(val);
+                    // console.log(val.name);
+                    rec = `<li>${val.name}</li>`;
+                    // console.log(rec);
+                    ans = ans + rec;
+                })
+                // console.log(ans);
+                $('ul').html(ans);
+            });
+        });
+    });
+</script>

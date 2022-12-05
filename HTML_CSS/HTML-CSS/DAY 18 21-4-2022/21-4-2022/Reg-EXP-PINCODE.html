@@ -1,0 +1,16 @@
+<input type="text" class="txt" placeholder=""/>
+<button>Validate</button>
+
+<script>
+    document.querySelector('button').onclick = function(){
+        var result = document.querySelector('.txt').value;
+        console.log(result);
+        // 6 digits --- 1 digit non zero
+        // var pattern_pincode = /^[1-9][0-9][0-9][0-9][0-9][0-9]$/;
+
+        // [0-9]{5} ---- {range}
+        var pattern_pincode = /^[1-9][0-9]{5}$/;
+        var ans = pattern_pincode.test(result);
+        console.log(ans);
+    }
+</script>

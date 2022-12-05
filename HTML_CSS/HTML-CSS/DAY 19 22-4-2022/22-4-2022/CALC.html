@@ -1,0 +1,43 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<style>
+    #txt{
+        width: 100%;
+        text-align: right;
+    }
+</style>
+
+<div class="container" style="width: 300px !important;">
+    <table class="table">
+        <tr>
+            <td colspan="4">
+                <input type="text" id="txt" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td onclick="myfunc(this)">1</td>
+            <td onclick="myfunc(this)">2</td>
+            <td onclick="myfunc(this)">3</td>
+            <td onclick="myfunc(this)">+</td>
+        </tr>
+        <tr>
+            <td onclick="myfunc(this)">4</td>
+            <td onclick="myfunc(this)">5</td>
+            <td onclick="myfunc(this)">6</td>
+            <td onclick="myfunc(this)">-</td>
+        </tr>
+        <tr>
+            <td onclick="myfunc(this)">7</td>
+            <td onclick="myfunc(this)">8</td>
+            <td onclick="myfunc(this)">9</td>
+            <td onclick="myfunc(this)">*</td>
+        </tr>
+        <tr>
+            <td onclick="myfunc(this)">0</td>
+            <td onclick="myfunc1()">C</td>
+            <td onclick="myfunc2()">=</td>
+            <td onclick="myfunc(this)">/</td>
+        </tr>
+    </table>
+</div>
+<script src="calc.js"></script>
